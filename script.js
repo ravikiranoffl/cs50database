@@ -7,7 +7,7 @@ let students = {
         courses: "NO COURSE",
         lang: "മലയാളം  (Malayalam)",
         attempts: "02 Left",
-        date: "2025-06-12",
+        date: "2025-06-11",
         status1: "Ineligible",
         url: "url-not-found"
     },
@@ -216,6 +216,7 @@ let students = {
         url: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgAymF0tkyOfw6Vm81K9H4VfW7LGdCavY9ff17RFC-k3Q3wMPImQDPZLZCnIU8O_tPZTg28XGh-vpFwDT558-Ntu-u3AsSzY9ScetVM18ZHnmJpkW5ZSKiNfDLXv-AjjAJ1P3cY_cqWhNykoKrwpSRtp5RdxweJ2O3Te1T0-bxqMmXBbhoc2uNTMzGr0Yg/s730/SSH-214524769.png"
     }
 };
+
 const flagMap = {
     "Asia/Kolkata": "https://flagemoji.com/wp-content/uploads/2020/02/Flag_of_India.svg",
     "Asia/Dubai": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg",
