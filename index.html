@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #marqueeContainer {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      #myMarquee {
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="marqueeContainer">
+      <marquee
+        id="myMarquee"
+        behavior="scroll"
+        direction="left"
+        scrollamount="5"
+      >
+        <img src="shinchan.gif" id="myGif" />
+      </marquee>
+    </div>
+
+    <button onclick="startAnimation()">Animate Call</button>
+
+    <script>
+      let scrollAmount = 5; // px per step
+      let frameRate = 60; // assume 60 frames/sec (~16ms delay)
+      let screenWidth = window.innerWidth;
+
+      // Calculate time = screen width / speed
+      let totalPixels = screenWidth + 500; // 500 = estimated gif width (adjust accordingly)
+      let timeInMs = (totalPixels / scrollAmount) * (1000 / frameRate); // total scroll time
+
+      // Hide after scroll time
+      setTimeout(() => {
+        document.getElementById("myMarquee").style.display = "none";
+      }, timeInMs);
+
+      function startAnimation() {
+        let marquee = document.getElementById("myMarquee");
+
+        // Reset marquee by cloning
+        let clone = marquee.cloneNode(true);
+        marquee.parentNode.replaceChild(clone, marquee);
+
+        // Show again
+        clone.style.display = "inline-block";
+
+        // Hide after scrolling again
+        setTimeout(() => {
+          clone.style.display = "none";
+        }, timeInMs);
+      }
+    </script>
+  </body>
+</html>
